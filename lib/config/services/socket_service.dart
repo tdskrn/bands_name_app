@@ -16,9 +16,10 @@ class SocketService with ChangeNotifier {
   SocketService() {
     initConfig();
   }
-
+  // https://flutter-socket-server-d80c2b2474b1.herokuapp.com/
+  //! link necessario para o celular acessar o localhost 'http://10.0.2.2:3000'
   void initConfig() {
-    _socket = IO.io('http://10.0.2.2:3000', {
+    _socket = IO.io("https://balbasa.onrender.com", {
       'transports': ['websocket'],
       'autoConnect': true
     });
